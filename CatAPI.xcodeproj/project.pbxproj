@@ -13,6 +13,8 @@
 		4AC9A308245D639E00A0353E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC9A306245D639E00A0353E /* Main.storyboard */; };
 		4AC9A30A245D63A200A0353E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC9A309245D63A200A0353E /* Assets.xcassets */; };
 		4AC9A30D245D63A200A0353E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */; };
+		4AC9A315245D67EC00A0353E /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC9A314245D67EC00A0353E /* HeroViewController.swift */; };
+		4AC9A317245D694B00A0353E /* CatsStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC9A316245D694B00A0353E /* CatsStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4AC9A309245D63A200A0353E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AC9A30C245D63A200A0353E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AC9A30E245D63A200A0353E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC9A314245D67EC00A0353E /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		4AC9A316245D694B00A0353E /* CatsStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				4AC9A306245D639E00A0353E /* Main.storyboard */,
 				4AC9A309245D63A200A0353E /* Assets.xcassets */,
 				4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */,
+				4AC9A314245D67EC00A0353E /* HeroViewController.swift */,
+				4AC9A316245D694B00A0353E /* CatsStats.swift */,
 				4AC9A30E245D63A200A0353E /* Info.plist */,
 			);
 			path = CatAPI;
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC9A315245D67EC00A0353E /* HeroViewController.swift in Sources */,
 				4AC9A305245D639D00A0353E /* ViewController.swift in Sources */,
 				4AC9A301245D639D00A0353E /* AppDelegate.swift in Sources */,
+				4AC9A317245D694B00A0353E /* CatsStats.swift in Sources */,
 				4AC9A303245D639D00A0353E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
