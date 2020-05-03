@@ -8,18 +8,18 @@
 
 import UIKit
 
-
-
 class HeroViewController: UIViewController {
-    
-
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var originLbl: UILabel!
+    
     
     var cats:CatsStats?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  
         nameLbl.text = cats?.name
+        originLbl.text = cats?.origin
         
     }
 }
