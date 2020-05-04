@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     var allcats = [CatsStats]() {
         didSet {
             DispatchQueue.main.async {
@@ -34,6 +36,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return allcats.count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell{
             let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
@@ -47,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? HeroViewController{
+        if let destination = segue.destination as? CatsViewController{
             destination.cats = allcats[tableView.indexPathForSelectedRow!.row]
         }
     }
