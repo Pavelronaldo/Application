@@ -12,16 +12,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var allcats = [CatsStats] ()
+    var allcats = [CatsStats]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        downloadJson {
-            self.tableView.reloadData()
-        }
+    
         tableView.delegate = self
         tableView.dataSource = self
+        downloadJson()
         
     }
         
@@ -48,17 +52,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func downloadJson(completed: @escaping () -> ()) {
+    func downloadJson() {
         let url = URL(string: "https://api.thecatapi.com/v1/breeds")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
             if error == nil {
+                guard let data = data else { return }
                 do {
-                    self.allcats = try JSONDecoder().decode([CatsStats].self, from: data!)
-                    DispatchQueue.main.async  {
-                        completed()
-                    }
+                    self.allcats = try JSONDecoder().decode([CatsStats].self, from: data)
                 }catch {
                     print("JSON Eror")
                 }

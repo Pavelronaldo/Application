@@ -19,14 +19,14 @@
 
 /* Begin PBXFileReference section */
 		4AC9A2FD245D639D00A0353E /* CatAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AC9A300245D639D00A0353E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AC9A302245D639D00A0353E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4AC9A300245D639D00A0353E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		4AC9A302245D639D00A0353E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		4AC9A304245D639D00A0353E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AC9A307245D639E00A0353E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AC9A309245D63A200A0353E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AC9A30C245D63A200A0353E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AC9A30E245D63A200A0353E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AC9A314245D67EC00A0353E /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		4AC9A314245D67EC00A0353E /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroViewController.swift; path = ../HeroViewController.swift; sourceTree = "<group>"; };
 		4AC9A316245D694B00A0353E /* CatsStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,17 +60,33 @@
 		4AC9A2FF245D639D00A0353E /* CatAPI */ = {
 			isa = PBXGroup;
 			children = (
-				4AC9A300245D639D00A0353E /* AppDelegate.swift */,
-				4AC9A302245D639D00A0353E /* SceneDelegate.swift */,
-				4AC9A304245D639D00A0353E /* ViewController.swift */,
+				4AD6DB4A24602AD70043E9F2 /* Supporting Files */,
+				4AD6DB4B24602AE30043E9F2 /* Part1 (Breeds List) */,
 				4AC9A306245D639E00A0353E /* Main.storyboard */,
-				4AC9A309245D63A200A0353E /* Assets.xcassets */,
 				4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */,
-				4AC9A314245D67EC00A0353E /* HeroViewController.swift */,
-				4AC9A316245D694B00A0353E /* CatsStats.swift */,
 				4AC9A30E245D63A200A0353E /* Info.plist */,
 			);
 			path = CatAPI;
+			sourceTree = "<group>";
+		};
+		4AD6DB4A24602AD70043E9F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AC9A300245D639D00A0353E /* AppDelegate.swift */,
+				4AC9A302245D639D00A0353E /* SceneDelegate.swift */,
+				4AC9A309245D63A200A0353E /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AD6DB4B24602AE30043E9F2 /* Part1 (Breeds List) */ = {
+			isa = PBXGroup;
+			children = (
+				4AC9A304245D639D00A0353E /* ViewController.swift */,
+				4AC9A314245D67EC00A0353E /* HeroViewController.swift */,
+				4AC9A316245D694B00A0353E /* CatsStats.swift */,
+			);
+			path = "Part1 (Breeds List)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +309,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AFQBM27DHF;
 				INFOPLIST_FILE = CatAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +328,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AFQBM27DHF;
 				INFOPLIST_FILE = CatAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

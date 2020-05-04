@@ -10,5 +10,8 @@ import Foundation
 
 struct CatsStats:Decodable {
     let name: String
+    let description: String
     let origin: String
+    let life_span: String
+    let temperament: String
 }
