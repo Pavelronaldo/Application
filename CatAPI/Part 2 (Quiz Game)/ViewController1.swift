@@ -25,7 +25,6 @@ class ViewController1: UIViewController {
         
         var questions : [Question]!
         var currentQuestion = 0
-        var grade = 0.0
         var quizEnded = false
         
         override func viewDidLoad() {
@@ -173,12 +172,37 @@ class ViewController1: UIViewController {
         func endQuiz() {
             quizEnded = true
             viewFeedback.isHidden = false
-            
-            viewFeedback.backgroundColor = UIColor.white
-            feedbackText.textColor = UIColor.black
-    
             feedbackButton.setTitle("Main Menu", for: UIControl.State())
         }
         
     }
 
+
+
+//        guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?id=abys") else { return }
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue("f2c7dc04-508b-43fc-80e4-f6bd85ed285d", forHTTPHeaderField: "x-api-key")
+//
+//        let session = URLSession.shared
+//        session.dataTask(with: request) { (data, response, error) in
+//            if let response = response {
+//                print(response)
+//            }
+//
+//            if let data = data {
+//                do {
+//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
+//                } catch {
+//                    print(error)
+//                }
+//            }
+//
+//        }.resume()
+//
+//    }
+//
+//
+//}
