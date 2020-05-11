@@ -1,5 +1,5 @@
 //
-//  MovieListModel.swift
+//  ImageModel.swift
 //  CatAPI
 //
 //  Created by Pavel Ronaldo on 5/2/20.
@@ -9,14 +9,8 @@
 import Foundation
 
 class ImageModel {
-    
     var url : String
-    
     init ( url : String) {
-        
         self.url = url
-
     }
-
-   
 }

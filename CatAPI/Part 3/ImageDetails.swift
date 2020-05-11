@@ -11,14 +11,10 @@ import UIKit
 class ImageDetails: UIViewController {
     
     var url = ""
-
-    
     @IBOutlet weak var Image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         Image.image = UIImage(named: url)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,16 +29,16 @@ class ImageDetails: UIViewController {
         let task = 	session.dataTask(with: Request) {[weak self] (data, response, error) in
             do {
                 let data = try! Data(contentsOf: url!)
-                
-                self?.Image.image = UIImage(data:data)
+                DispatchQueue.main.async {
+                    self?.Image.image = UIImage(data:data)
+                    
+                }
                 
             }
             
         }
-        
         task.resume()
         
     }
-
-
+    
 }

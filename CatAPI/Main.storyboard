@@ -542,7 +542,7 @@
         <!--Image list-->
         <scene sceneID="Bit-CK-AKA">
             <objects>
-                <viewController storyboardIdentifier="MovieListVC" id="Y3I-ej-Tu7" customClass="ImageListVC" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListVC" id="Y3I-ej-Tu7" customClass="ImageListVC" customModule="CatAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="miU-BB-CgE"/>
                         <viewControllerLayoutGuide type="bottom" id="hY4-AD-Uv8"/>
@@ -555,7 +555,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="150" id="44n-0K-xaP" customClass="MovieListCell" customModule="Movie_List" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="150" id="44n-0K-xaP" customClass="ImageListCell" customModule="CatAPI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44n-0K-xaP" id="dc5-oH-WhG">
@@ -568,6 +568,12 @@
                                                         <constraint firstAttribute="width" constant="139" id="gD4-hx-OLZ"/>
                                                         <constraint firstAttribute="height" constant="103" id="ihH-wt-Egp"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -608,7 +614,7 @@
         <!--Image Details-->
         <scene sceneID="ZXI-4L-ZKP">
             <objects>
-                <viewController storyboardIdentifier="MovieDetails" id="I1w-Kf-K7u" customClass="ImageDetails" customModule="Movie_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetails" id="I1w-Kf-K7u" customClass="ImageDetails" customModule="CatAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4fu-lA-sGh"/>
                         <viewControllerLayoutGuide type="bottom" id="VY7-y8-O1Y"/>
