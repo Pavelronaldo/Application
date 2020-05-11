@@ -23,8 +23,10 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loading = LoadingStatus(self.view)
+        loading.show()
         
-       
+        
         
     fetchImages()
     }

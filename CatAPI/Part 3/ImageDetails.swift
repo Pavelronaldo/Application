@@ -13,10 +13,11 @@ class ImageDetails: UIViewController {
     var url = ""
     @IBOutlet weak var Image: UIImageView!
     
-     @IBOutlet weak var AI: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         Image.image = UIImage(named: url)
     }
     

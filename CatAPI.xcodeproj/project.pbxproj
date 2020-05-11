@@ -23,6 +23,7 @@
 		4ACED3082469B7F700EDB54C /* CatsStats1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3052469B7F700EDB54C /* CatsStats1.swift */; };
 		4ACED3092469B7F700EDB54C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3062469B7F700EDB54C /* QuizModel.swift */; };
 		4ACED30E2469E94C00EDB54C /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED30D2469E94B00EDB54C /* LoadingStatus.swift */; };
+		4ACED3122469EBCA00EDB54C /* LoadingStatus3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3112469EBCA00EDB54C /* LoadingStatus3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4ACED3052469B7F700EDB54C /* CatsStats1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsStats1.swift; sourceTree = "<group>"; };
 		4ACED3062469B7F700EDB54C /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		4ACED30D2469E94B00EDB54C /* LoadingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
+		4ACED3112469EBCA00EDB54C /* LoadingStatus3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStatus3.swift; path = CatAPI/LoadingStatus3.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4A6B0E5A24682E4500E9D770 /* Part 3 */ = {
 			isa = PBXGroup;
 			children = (
+				4ACED3112469EBCA00EDB54C /* LoadingStatus3.swift */,
 				4A6B0E5B24682FDE00E9D770 /* ImageDetails.swift */,
 				4A6B0E5E24682FDE00E9D770 /* ImageListVC.swift */,
 				4A6B0E5C24682FDE00E9D770 /* ImageListCell.swift */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACED3122469EBCA00EDB54C /* LoadingStatus3.swift in Sources */,
 				4A6B0E6124682FDE00E9D770 /* ImageModel.swift in Sources */,
 				4A6B0E6024682FDE00E9D770 /* ImageListCell.swift in Sources */,
 				4ACED30E2469E94C00EDB54C /* LoadingStatus.swift in Sources */,
