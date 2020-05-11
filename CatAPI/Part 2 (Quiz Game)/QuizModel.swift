@@ -17,6 +17,7 @@ class Question {
     init (question: String, answers: [Answer]) {
         self.question = question
         self.answers = answers
+    
     }
 }
 
