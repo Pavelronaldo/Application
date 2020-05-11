@@ -1,5 +1,5 @@
 //
-//  HeroStats.swift
+//  CatsStats.swift
 //  CatAPI
 //
 //  Created by Pavel Ronaldo on 5/2/20.
