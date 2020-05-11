@@ -1,5 +1,5 @@
 //
-//  MovieListCell.swift
+//  ImageListCell.swift
 //  CatAPI
 //
 //  Created by Pavel Ronaldo on 5/2/20.
@@ -13,6 +13,7 @@ class ImageListCell: UITableViewCell {
     @IBOutlet weak var CatsImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -44,6 +44,7 @@ class ViewController1: UIViewController {
     @IBOutlet weak var viewFeedback: UIView!
     @IBOutlet weak var feedbackText: UILabel!
     @IBOutlet weak var feedbackButton: UIButton!
+    @IBOutlet weak var gotomainmenu: UIButton!
     
     var questions : [Question]!
     var currentQuestion = 0
@@ -170,9 +171,10 @@ class ViewController1: UIViewController {
         }
         
         if (currentQuestion < questions.count-1) {
+            gotomainmenu.isHidden = true
             feedbackButton.setTitle("Next", for: UIControl.State())
         } else {
-            feedbackButton.setTitle("end", for: UIControl.State())
+        feedbackButton.setTitle("end", for: UIControl.State())
         }
         
         viewFeedback.isHidden = false
@@ -201,7 +203,8 @@ class ViewController1: UIViewController {
     func endQuiz() {
         quizEnded = true
         viewFeedback.isHidden = false
-        feedbackButton.setTitle("Main Menu", for: UIControl.State())
+        feedbackButton.isHidden = true
+        gotomainmenu.isHidden = false
     }
     
 }

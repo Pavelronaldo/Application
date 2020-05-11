@@ -1,5 +1,5 @@
 //
-//  ImageListVc.swift
+//  ImageListVC.swift
 //  CatAPI
 //
 //  Created by Pavel Ronaldo on 5/2/20.
@@ -11,16 +11,20 @@ import UIKit
 class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableviewimage: UITableView!
     
+  
     var images = [ImageModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableviewimage.reloadData()
+                
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         
     fetchImages()
     }
@@ -47,13 +51,16 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+
     }
     
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+ 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return images.count
     }
@@ -62,7 +69,7 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageListCell
         cell.setimg(Url: images[indexPath.row].url)
         
-        
+       
         return cell
     }
     
