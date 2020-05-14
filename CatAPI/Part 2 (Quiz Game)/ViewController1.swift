@@ -11,7 +11,9 @@ import UIKit
 
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        contentMode = mode
+        DispatchQueue.main.async {
+            self.contentMode = mode
+        }
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -50,18 +52,22 @@ class ViewController1: UIViewController {
     var currentQuestion = 0
     var quizEnded = false
     var cats:Image?
+    
+    var catImages = [Image]() {
+        didSet {
+            self.loadQuestions()
+            self.startQuiz()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let closure: (Image?)->(Void) = { (image)  in
-            let urlString = image?.url
-            let url = URL(string: urlString!)
-            self.imgQuestion.downloaded(from: url!)
+        downloadImage { (images) in
+            guard let images = images else { return }
+            self.catImages = images
         }
-        downloadImage(completion: closure)
-        
-        loadQuestions()
-        startQuiz()
     }
     
     func loadQuestions() -> Void {
@@ -72,8 +78,8 @@ class ViewController1: UIViewController {
                 Answer(answer: "2", isRight: false),
                 Answer(answer: "3", isRight: false),
                 Answer(answer: "4", isRight: false)
-            ]
-            
+            ],
+            image: catImages[0].url
         )
         
         let question2 = Question(
@@ -81,9 +87,10 @@ class ViewController1: UIViewController {
             answers: [
                 Answer(answer: "22", isRight: true),
                 Answer(answer: "33", isRight: false),
-                Answer(answer: "", isRight: false),
-                Answer(answer: "", isRight: false)
-            ]
+                Answer(answer: "656567", isRight: false),
+                Answer(answer: "7676", isRight: false)
+            ],
+            image: catImages[1].url
             
         )
         
@@ -122,8 +129,9 @@ class ViewController1: UIViewController {
         
         quizEnded = false
         currentQuestion = 0
-        viewFeedback.isHidden = true
-        
+        DispatchQueue.main.async {
+            self.viewFeedback.isHidden = true
+        }
         showQuestion(0)
     }
     
@@ -131,12 +139,20 @@ class ViewController1: UIViewController {
         enableButtons()
         
         let selectedQuestion : Question = questions[questionId]
-        question.text = selectedQuestion.question
         
-        answer1.setTitle(selectedQuestion.answers[0].response, for: UIControl.State())
-        answer2.setTitle(selectedQuestion.answers[1].response, for: UIControl.State())
-        answer3.setTitle(selectedQuestion.answers[2].response, for: UIControl.State())
-        answer4.setTitle(selectedQuestion.answers[3].response, for: UIControl.State())
+        DispatchQueue.main.async {
+            self.question.text = selectedQuestion.question
+        }
+        
+        guard let url = URL(string: selectedQuestion.image) else { return }
+
+        DispatchQueue.main.async {
+            self.imgQuestion.downloaded(from: url)
+            self.answer1.setTitle(selectedQuestion.answers[0].response, for: UIControl.State())
+            self.answer2.setTitle(selectedQuestion.answers[1].response, for: UIControl.State())
+            self.answer3.setTitle(selectedQuestion.answers[2].response, for: UIControl.State())
+            self.answer4.setTitle(selectedQuestion.answers[3].response, for: UIControl.State())
+        }
     }
     
     func disableButtons() -> Void {
@@ -148,11 +164,13 @@ class ViewController1: UIViewController {
     }
     
     func enableButtons() -> Void {
-        answer1.isEnabled = true
-        answer2.isEnabled = true
-        answer3.isEnabled = true
-        answer4.isEnabled = true
-        question.isHidden = false
+        DispatchQueue.main.async {
+            self.answer1.isEnabled = true
+            self.answer2.isEnabled = true
+            self.answer3.isEnabled = true
+            self.answer4.isEnabled = true
+            self.question.isHidden = false
+        }
     }
     
     func selectAnswer(_ answerId : Int) -> Void {
@@ -209,8 +227,8 @@ class ViewController1: UIViewController {
     
 }
 
-func downloadImage(completion: ((Image?)->Void)? )  {
-    guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?id=abys&limit=2") else { return }
+func downloadImage(completion: (([Image]?)->Void)? )  {
+    guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=2") else { return }
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
     request.addValue("f2c7dc04-508b-43fc-80e4-f6bd85ed285d", forHTTPHeaderField: "x-api-key")
@@ -224,7 +242,7 @@ func downloadImage(completion: ((Image?)->Void)? )  {
         if let data = data {
             do {
                 let allcats = try JSONDecoder().decode([Image].self, from: data)
-                completion?(allcats.first)
+                completion?(allcats)
                 
             } catch {
                 print(error)
@@ -234,8 +252,3 @@ func downloadImage(completion: ((Image?)->Void)? )  {
     }.resume()
     
 }
-
-
-
-
-

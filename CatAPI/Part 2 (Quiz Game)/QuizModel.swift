@@ -13,11 +13,12 @@ import UIKit
 class Question {
     var question : String?
     var answers : [Answer]!
+    var image: String!
     
-    init (question: String, answers: [Answer]) {
+    init (question: String, answers: [Answer], image: String) {
         self.question = question
         self.answers = answers
-    
+        self.image = image    
     }
 }
 

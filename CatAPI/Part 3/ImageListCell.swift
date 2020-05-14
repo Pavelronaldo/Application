@@ -11,6 +11,8 @@ import UIKit
 class ImageListCell: UITableViewCell {
     
     @IBOutlet weak var CatsImage: UIImageView!
+    
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,7 +24,7 @@ class ImageListCell: UITableViewCell {
     }
     
     func setimg(Url : String) {
-        
+        loadingView.startAnimating()
         let url = URL (string: Url)
         let Request = URLRequest (url: url!)
         let session = URLSession (configuration: URLSessionConfiguration.default)
@@ -31,6 +33,7 @@ class ImageListCell: UITableViewCell {
                 let data = try! Data(contentsOf: url!)
                 DispatchQueue.main.async {
                     self?.CatsImage.image = UIImage(data: data)
+                    self?.loadingView.stopAnimating()
                 }
             }
             

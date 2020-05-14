@@ -11,7 +11,7 @@ import UIKit
 class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableviewimage: UITableView!
     
-  
+    
     var images = [ImageModel]() {
         didSet {
             DispatchQueue.main.async {
@@ -23,12 +23,7 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loading = LoadingStatus(self.view)
-        loading.show()
-        
-        
-        
-    fetchImages()
+        fetchImages()
     }
     
     func fetchImages() {

@@ -25,8 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let loading = LoadingStatus(self.view)
-        loading.show()
+        
         
         tableView.delegate = self
         tableView.dataSource = self
