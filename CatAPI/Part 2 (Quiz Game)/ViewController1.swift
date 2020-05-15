@@ -38,6 +38,7 @@ class ViewController1: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var imgQuestion: UIImageView!
     
+    @IBOutlet weak var loadingView2: UIActivityIndicatorView!
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
@@ -78,9 +79,13 @@ class ViewController1: UIViewController {
                 Answer(answer: "2", isRight: false),
                 Answer(answer: "3", isRight: false),
                 Answer(answer: "4", isRight: false)
+                
             ],
             image: catImages[0].url
         )
+        DispatchQueue.main.async{
+            self.loadingView2.startAnimating()
+        }
         
         let question2 = Question(
             question: "Guess the breed",
@@ -93,11 +98,16 @@ class ViewController1: UIViewController {
             image: catImages[1].url
             
         )
+        DispatchQueue.main.async{
+            self.loadingView2.startAnimating()
+        }
         
         self.questions = [
             question1,
             question2
+            
         ]
+        
     }
     
     override func didReceiveMemoryWarning() {

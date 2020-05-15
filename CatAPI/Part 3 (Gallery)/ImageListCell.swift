@@ -13,6 +13,7 @@ class ImageListCell: UITableViewCell {
     @IBOutlet weak var CatsImage: UIImageView!
     
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

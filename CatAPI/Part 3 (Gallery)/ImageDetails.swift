@@ -11,14 +11,17 @@ import UIKit
 class ImageDetails: UIViewController {
     
     var url = ""
+    
     @IBOutlet weak var Image: UIImageView!
+    @IBOutlet weak var viewLoading3: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        viewLoading3.startAnimating()
         Image.image = UIImage(named: url)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +38,7 @@ class ImageDetails: UIViewController {
                 let data = try! Data(contentsOf: url!)
                 DispatchQueue.main.async {
                     self?.Image.image = UIImage(data:data)
-                    
+                    self?.viewLoading3.stopAnimating()
                 }
                 
             }

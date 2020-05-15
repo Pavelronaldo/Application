@@ -21,6 +21,11 @@
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.20392156862745098" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexColor" red="0.23137254900000001" green="0.74117647060000003" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.13333333333333333" green="0.20392156862745098" blue="0.23529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="F3n-Hd-gHo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -172,7 +177,7 @@
         <!--🐱-->
         <scene sceneID="D6k-a1-tmC">
             <objects>
-                <viewController id="heG-me-hod" sceneMemberID="viewController">
+                <viewController id="heG-me-hod" customClass="StartViewController" customModule="CatAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MIB-He-hd0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,6 +387,11 @@
                                     <action selector="chooseAnswer2:" destination="Cjl-Y4-Hd5" eventType="touchUpInside" id="esc-yx-JbU"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="c6n-NL-wM9">
+                                <rect key="frame" x="197" y="260" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzb-3p-N0J">
                                 <rect key="frame" x="104" y="602" width="206" height="73"/>
                                 <color key="backgroundColor" red="1" green="0.7725490196" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -423,6 +433,12 @@
                                 <rect key="frame" x="46" y="184" width="321" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5R-cN-X25">
+                                <rect key="frame" x="85" y="353" width="242" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-VJ-CqT" userLabel="ViewFeedback">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
@@ -470,12 +486,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5R-cN-X25">
-                                <rect key="frame" x="85" y="353" width="242" height="85"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -524,6 +534,7 @@
                         <outlet property="feedbackText" destination="lbT-A0-I0h" id="L2A-de-Nx1"/>
                         <outlet property="gotomainmenu" destination="eYo-Vc-CIH" id="xWa-r7-tzi"/>
                         <outlet property="imgQuestion" destination="eNt-3V-wUO" id="FL6-uU-578"/>
+                        <outlet property="loadingView2" destination="c6n-NL-wM9" id="Ra1-A9-8BY"/>
                         <outlet property="question" destination="j5R-cN-X25" id="NUa-B6-LIQ"/>
                         <outlet property="viewFeedback" destination="7ve-VJ-CqT" id="pg3-Ak-qBm"/>
                     </connections>
@@ -663,6 +674,10 @@
                                 <rect key="frame" x="221" y="504" width="193" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fGl-ya-IJA">
+                                <rect key="frame" x="178" y="377" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p1e-wM-kMx">
                                 <rect key="frame" x="20" y="275" width="374" height="241"/>
                                 <constraints>
@@ -678,7 +693,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 32" translatesAutoresizingMaskIntoConstraints="NO" id="lbK-Nq-mT7">
                                 <rect key="frame" x="20" y="546" width="155" height="234"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-US-Gx9" customClass="RoundButton" customModule="CatAPI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-US-Gx9" customClass="RoundButton">
                                 <rect key="frame" x="49" y="689" width="317" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.87450980389999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -719,6 +734,7 @@
                     <navigationItem key="navigationItem" id="TCl-rS-qgs"/>
                     <connections>
                         <outlet property="Image" destination="p1e-wM-kMx" id="fwM-Is-BQ4"/>
+                        <outlet property="viewLoading3" destination="fGl-ya-IJA" id="x1t-yV-wmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fX8-zB-GVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
