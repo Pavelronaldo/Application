@@ -75,10 +75,10 @@ class ViewController1: UIViewController {
         let question1 = Question(
             question: "Guess the breed",
             answers: [
-                Answer(answer: "1", isRight: true),
-                Answer(answer: "2", isRight: false),
-                Answer(answer: "3", isRight: false),
-                Answer(answer: "4", isRight: false)
+                Answer(answer: "Tonkinese", isRight: true),
+                Answer(answer: "Toyger", isRight: false),
+                Answer(answer: "Turkish Van", isRight: false),
+                Answer(answer: "Snowshoe", isRight: false)
                 
             ],
             image: catImages[0].url
@@ -90,17 +90,15 @@ class ViewController1: UIViewController {
         let question2 = Question(
             question: "Guess the breed",
             answers: [
-                Answer(answer: "22", isRight: true),
-                Answer(answer: "33", isRight: false),
-                Answer(answer: "656567", isRight: false),
-                Answer(answer: "7676", isRight: false)
+                Answer(answer: "Somali", isRight: true),
+                Answer(answer: "Siberian", isRight: false),
+                Answer(answer: "Selkirk Rex", isRight: false),
+                Answer(answer: "Scottish Fold", isRight: false)
             ],
             image: catImages[1].url
             
         )
-        DispatchQueue.main.async{
-            self.loadingView2.startAnimating()
-        }
+
         
         self.questions = [
             question1,
@@ -238,7 +236,7 @@ class ViewController1: UIViewController {
 }
 
 func downloadImage(completion: (([Image]?)->Void)? )  {
-    guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=2") else { return }
+    guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?id=soma&limit=2&id=tonk") else { return }
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
     request.addValue("f2c7dc04-508b-43fc-80e4-f6bd85ed285d", forHTTPHeaderField: "x-api-key")

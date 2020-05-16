@@ -22,7 +22,6 @@
 		4ACED3072469B7F700EDB54C /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3042469B7F700EDB54C /* ViewController1.swift */; };
 		4ACED3082469B7F700EDB54C /* CatsStats1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3052469B7F700EDB54C /* CatsStats1.swift */; };
 		4ACED3092469B7F700EDB54C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACED3062469B7F700EDB54C /* QuizModel.swift */; };
-		4AFE8EB0246F0646006E314A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFE8EAF246F0646006E314A /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		4ACED3042469B7F700EDB54C /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		4ACED3052469B7F700EDB54C /* CatsStats1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsStats1.swift; sourceTree = "<group>"; };
 		4ACED3062469B7F700EDB54C /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
-		4AFE8EAF246F0646006E314A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +130,6 @@
 		4AFE8EB1246F0657006E314A /* Start VC */ = {
 			isa = PBXGroup;
 			children = (
-				4AFE8EAF246F0646006E314A /* StartViewController.swift */,
 			);
 			path = "Start VC";
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 				4ACED3082469B7F700EDB54C /* CatsStats1.swift in Sources */,
 				4AC9A315245D67EC00A0353E /* CatsViewController.swift in Sources */,
 				4AC9A305245D639D00A0353E /* ViewController.swift in Sources */,
-				4AFE8EB0246F0646006E314A /* StartViewController.swift in Sources */,
 				4ACED3072469B7F700EDB54C /* ViewController1.swift in Sources */,
 				4AC9A301245D639D00A0353E /* AppDelegate.swift in Sources */,
 				4AC9A317245D694B00A0353E /* CatsStats.swift in Sources */,

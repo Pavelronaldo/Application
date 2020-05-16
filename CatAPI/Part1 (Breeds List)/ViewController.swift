@@ -9,10 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
-    
-    
     
     var allcats = [CatsStats]() {
         didSet {
@@ -24,13 +22,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         tableView.delegate = self
         tableView.dataSource = self
         downloadJson()
         
     }
-        
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allcats.count

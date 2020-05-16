@@ -8,17 +8,22 @@
 
 import UIKit
 
-class ImageDetails: UIViewController {
+class ImageDetails: UIViewController, UIScrollViewDelegate {
     
     var url = ""
     
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var viewLoading3: UIActivityIndicatorView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let minScale: Float = Float(scrollView.frame.size.width / Image.frame.size.width)
+        scrollView.minimumZoomScale = CGFloat(minScale)
+        scrollView.maximumZoomScale = 3.0
+        scrollView.contentSize = Image.frame.size
+        scrollView.delegate = self
         viewLoading3.startAnimating()
         Image.image = UIImage(named: url)
         
@@ -27,6 +32,9 @@ class ImageDetails: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.Image
+}
     
     func setimg(Url : String) {
         
