@@ -13,16 +13,16 @@ class CatsViewController: UIViewController {
     @IBOutlet weak var originLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var life_spanLbl: UILabel!
-  @IBOutlet weak var temperamentLbl: UILabel!
+    @IBOutlet weak var temperamentLbl: UILabel!
     var cats:CatsStats?
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         descriptionLbl.text = cats?.description
         originLbl.text = cats?.origin
         life_spanLbl.text = cats?.life_span
-       temperamentLbl.text = cats?.temperament
+        temperamentLbl.text = cats?.temperament
         
     }
 }

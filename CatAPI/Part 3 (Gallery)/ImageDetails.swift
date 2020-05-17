@@ -15,7 +15,7 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var viewLoading3: UIActivityIndicatorView!
     @IBOutlet var scroll_View: UIScrollView!
-    
+    @IBOutlet var MainMenu: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,7 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
     }
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.Image
-}
-    
+    }
     
     func setimg(Url : String) {
         
@@ -47,7 +46,7 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
                     self?.Image.image = UIImage(data:data)
                     self?.viewLoading3.stopAnimating()
                 }
-        
+                
             }
         }
         task.resume()

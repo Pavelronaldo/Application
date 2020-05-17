@@ -90,7 +90,6 @@
 				4AD6DB4D24603AC00043E9F2 /* Part 2 (Quiz Game) */,
 				4A6B0E5A24682E4500E9D770 /* Part 3 (Gallery) */,
 				4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */,
-				4A84923724646E47009E8C17 /* Main.storyboard */,
 				4AC9A30E245D63A200A0353E /* Info.plist */,
 			);
 			path = CatAPI;
@@ -99,6 +98,7 @@
 		4AD6DB4A24602AD70043E9F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A84923724646E47009E8C17 /* Main.storyboard */,
 				4AC9A300245D639D00A0353E /* AppDelegate.swift */,
 				4AC9A302245D639D00A0353E /* SceneDelegate.swift */,
 				4AC9A309245D63A200A0353E /* Assets.xcassets */,

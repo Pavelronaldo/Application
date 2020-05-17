@@ -11,7 +11,6 @@ import UIKit
 class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableviewimage: UITableView!
     
-    
     var images = [ImageModel]() {
         didSet {
             DispatchQueue.main.async {
@@ -45,14 +44,9 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         }
         task.resume()
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-
     }
-    
-   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -74,7 +68,6 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         let MoviedetailsObj = storyboard?.instantiateViewController(withIdentifier: "ImageDetails") as? ImageDetails
         MoviedetailsObj?.setimg(Url: images[indexPath.row].url)
-        
         
         navigationController?.pushViewController(MoviedetailsObj!, animated: true)
     }

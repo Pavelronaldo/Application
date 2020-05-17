@@ -21,7 +21,6 @@ class Question {
         self.image = image    
     }
 }
-
 class Answer {
     var response: String!
     var isRight: Bool!

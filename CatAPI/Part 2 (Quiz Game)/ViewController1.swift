@@ -37,13 +37,11 @@ class ViewController1: UIViewController {
     
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var imgQuestion: UIImageView!
-    
     @IBOutlet weak var loadingView2: UIActivityIndicatorView!
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var answer4: UIButton!
-    
     @IBOutlet weak var viewFeedback: UIView!
     @IBOutlet weak var feedbackText: UILabel!
     @IBOutlet weak var feedbackButton: UIButton!
@@ -53,24 +51,19 @@ class ViewController1: UIViewController {
     var currentQuestion = 0
     var quizEnded = false
     var cats:Image?
-    
     var catImages = [Image]() {
         didSet {
             self.loadQuestions()
             self.startQuiz()
         }
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         downloadImage { (images) in
             guard let images = images else { return }
             self.catImages = images
         }
     }
-    
     func loadQuestions() -> Void {
         let question1 = Question(
             question: "Guess the breed",
@@ -79,14 +72,12 @@ class ViewController1: UIViewController {
                 Answer(answer: "Toyger", isRight: false),
                 Answer(answer: "Turkish Van", isRight: false),
                 Answer(answer: "Snowshoe", isRight: false)
-                
             ],
             image: catImages[0].url
         )
         DispatchQueue.main.async{
             self.loadingView2.startAnimating()
         }
-        
         let question2 = Question(
             question: "Guess the breed",
             answers: [
@@ -96,18 +87,12 @@ class ViewController1: UIViewController {
                 Answer(answer: "Scottish Fold", isRight: false)
             ],
             image: catImages[1].url
-            
         )
-
-        
         self.questions = [
             question1,
             question2
-            
         ]
-        
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -130,11 +115,9 @@ class ViewController1: UIViewController {
     
     func startQuiz() -> Void {
         questions.shuffle()
-        
         for i in 0 ..< questions.count {
             questions[i].answers.shuffle()
         }
-        
         quizEnded = false
         currentQuestion = 0
         DispatchQueue.main.async {
