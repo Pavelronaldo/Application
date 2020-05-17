@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A659A01247180BB009023EF /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A659A00247180BB009023EF /* MainMenuViewController.swift */; };
 		4A6B0E5F24682FDE00E9D770 /* ImageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B0E5B24682FDE00E9D770 /* ImageDetails.swift */; };
 		4A6B0E6024682FDE00E9D770 /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B0E5C24682FDE00E9D770 /* ImageListCell.swift */; };
 		4A6B0E6124682FDE00E9D770 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B0E5D24682FDE00E9D770 /* ImageModel.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A659A00247180BB009023EF /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		4A6B0E5B24682FDE00E9D770 /* ImageDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetails.swift; sourceTree = "<group>"; };
 		4A6B0E5C24682FDE00E9D770 /* ImageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 		4A6B0E5D24682FDE00E9D770 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				4A6B0E5A24682E4500E9D770 /* Part 3 (Gallery) */,
 				4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */,
 				4AC9A30E245D63A200A0353E /* Info.plist */,
+				4A659A00247180BB009023EF /* MainMenuViewController.swift */,
 			);
 			path = CatAPI;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				4AC9A315245D67EC00A0353E /* CatsViewController.swift in Sources */,
 				4AC9A305245D639D00A0353E /* ViewController.swift in Sources */,
 				4ACED3072469B7F700EDB54C /* ViewController1.swift in Sources */,
+				4A659A01247180BB009023EF /* MainMenuViewController.swift in Sources */,
 				4AC9A301245D639D00A0353E /* AppDelegate.swift in Sources */,
 				4AC9A317245D694B00A0353E /* CatsStats.swift in Sources */,
 				4AC9A303245D639D00A0353E /* SceneDelegate.swift in Sources */,
