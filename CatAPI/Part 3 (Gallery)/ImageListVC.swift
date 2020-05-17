@@ -72,7 +72,7 @@ class ImageListVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let MoviedetailsObj = storyboard?.instantiateViewController(withIdentifier: "MovieDetails") as? ImageDetails
+        let MoviedetailsObj = storyboard?.instantiateViewController(withIdentifier: "ImageDetails") as? ImageDetails
         MoviedetailsObj?.setimg(Url: images[indexPath.row].url)
         
         

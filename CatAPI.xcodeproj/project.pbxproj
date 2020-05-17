@@ -85,7 +85,6 @@
 		4AC9A2FF245D639D00A0353E /* CatAPI */ = {
 			isa = PBXGroup;
 			children = (
-				4AFE8EB1246F0657006E314A /* Start VC */,
 				4AD6DB4A24602AD70043E9F2 /* Supporting Files */,
 				4AD6DB4B24602AE30043E9F2 /* Part1 (Breeds List) */,
 				4AD6DB4D24603AC00043E9F2 /* Part 2 (Quiz Game) */,
@@ -125,13 +124,6 @@
 				4ACED3042469B7F700EDB54C /* ViewController1.swift */,
 			);
 			path = "Part 2 (Quiz Game)";
-			sourceTree = "<group>";
-		};
-		4AFE8EB1246F0657006E314A /* Start VC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Start VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

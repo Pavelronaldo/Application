@@ -14,16 +14,14 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var viewLoading3: UIActivityIndicatorView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var scroll_View: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let minScale: Float = Float(scrollView.frame.size.width / Image.frame.size.width)
-        scrollView.minimumZoomScale = CGFloat(minScale)
-        scrollView.maximumZoomScale = 3.0
-        scrollView.contentSize = Image.frame.size
-        scrollView.delegate = self
+        scroll_View.maximumZoomScale = 4.0
+        scroll_View.minimumZoomScale = 1.0
+        scroll_View.delegate = self
         viewLoading3.startAnimating()
         Image.image = UIImage(named: url)
         
@@ -35,6 +33,7 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.Image
 }
+    
     
     func setimg(Url : String) {
         
@@ -48,12 +47,37 @@ class ImageDetails: UIViewController, UIScrollViewDelegate {
                     self?.Image.image = UIImage(data:data)
                     self?.viewLoading3.stopAnimating()
                 }
-                
+        
             }
-            
         }
         task.resume()
         
     }
     
 }
+
+extension ImageDetails {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return Image
+    }
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if scroll_View.zoomScale > 1{
+            if let image = Image.image{
+                let rationWidth = Image.frame.width/image.size.width
+                let rationHight = Image.frame.height / image.size.height
+                let ration = rationWidth < rationHight ? rationWidth : rationHight
+                let newWidth = image.size.width * ration
+                let newHight = image.size.height * ration
+                let conditionLeft = newWidth * scrollView.zoomScale > Image.frame.width
+                let left = 0.5 * (conditionLeft ? newWidth - Image.frame.width : (scrollView.frame.width - scrollView.contentSize.width))
+                let conditionTop = newHight*scrollView.zoomScale > Image.frame.height
+                let top = 0.5 * (conditionTop ? newHight - Image.frame.height : (scrollView.frame.height - scrollView.contentSize.height))
+                scrollView.contentInset = UIEdgeInsets(top: top, left: left, bottom: top, right: left)
+            }
+        }else{
+            scrollView.contentInset = .zero
+        }
+    }
+}
+
