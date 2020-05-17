@@ -183,9 +183,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-Gk-tcY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-Gk-tcY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 32" translatesAutoresizingMaskIntoConstraints="NO" id="Pns-x8-edC">
                                 <rect key="frame" x="7" y="99" width="155" height="84"/>
@@ -199,6 +198,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK1-zy-haz" customClass="RoundButton" customModule="CatAPI">
                                 <rect key="frame" x="49" y="773" width="317" height="78"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.87450980392156863" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="NVk-WH-uVJ"/>
+                                </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -227,15 +229,18 @@
                             <constraint firstItem="rBU-cu-QBe" firstAttribute="leading" secondItem="r6V-6R-d85" secondAttribute="leading" constant="174" id="A5w-oU-4Gl"/>
                             <constraint firstItem="Pns-x8-edC" firstAttribute="top" secondItem="r6V-6R-d85" secondAttribute="top" constant="11" id="AxT-Ov-U0d"/>
                             <constraint firstItem="r6V-6R-d85" firstAttribute="trailing" secondItem="GIW-zx-Feh" secondAttribute="trailing" constant="201" id="BJf-Nn-DJa"/>
+                            <constraint firstItem="p8l-Gk-tcY" firstAttribute="centerX" secondItem="DK1-zy-haz" secondAttribute="centerX" id="DAN-3F-WlX"/>
                             <constraint firstItem="r6V-6R-d85" firstAttribute="trailing" secondItem="Pns-x8-edC" secondAttribute="trailing" constant="252" id="Fnd-KR-fio"/>
+                            <constraint firstItem="r6V-6R-d85" firstAttribute="trailing" secondItem="p8l-Gk-tcY" secondAttribute="trailing" id="Lg3-gE-eke"/>
                             <constraint firstItem="GIW-zx-Feh" firstAttribute="leading" secondItem="r6V-6R-d85" secondAttribute="leading" constant="20" id="Ott-zc-vrc"/>
                             <constraint firstItem="Ig1-F3-An6" firstAttribute="top" secondItem="pA5-p4-8m1" secondAttribute="bottom" constant="13" id="PY4-d1-X3T"/>
                             <constraint firstItem="r6V-6R-d85" firstAttribute="bottom" secondItem="Pns-x8-edC" secondAttribute="bottom" constant="679" id="WIW-TT-oWU"/>
                             <constraint firstItem="r6V-6R-d85" firstAttribute="bottom" secondItem="pA5-p4-8m1" secondAttribute="bottom" constant="668" id="XjX-XV-EnU"/>
                             <constraint firstItem="rBU-cu-QBe" firstAttribute="top" secondItem="pA5-p4-8m1" secondAttribute="bottom" constant="283" id="Yl6-lF-39N"/>
-                            <constraint firstItem="DK1-zy-haz" firstAttribute="top" secondItem="pA5-p4-8m1" secondAttribute="bottom" constant="579" id="Zu9-BN-3bY"/>
+                            <constraint firstItem="p8l-Gk-tcY" firstAttribute="top" secondItem="r6V-6R-d85" secondAttribute="top" id="ZHz-wa-n1q"/>
                             <constraint firstItem="DK1-zy-haz" firstAttribute="top" secondItem="rBU-cu-QBe" secondAttribute="bottom" constant="8" id="dpt-bV-6Dp"/>
                             <constraint firstItem="r6V-6R-d85" firstAttribute="trailing" secondItem="Ig1-F3-An6" secondAttribute="trailing" constant="34" id="etB-pw-8n7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="p8l-Gk-tcY" secondAttribute="bottom" constant="-34" id="hp1-Bz-HHy"/>
                             <constraint firstItem="GIW-zx-Feh" firstAttribute="top" secondItem="Pns-x8-edC" secondAttribute="bottom" constant="458" id="j1C-Ur-KdH"/>
                             <constraint firstItem="pA5-p4-8m1" firstAttribute="leading" secondItem="Pns-x8-edC" secondAttribute="trailing" constant="62" id="lri-iZ-8xX"/>
                             <constraint firstItem="DK1-zy-haz" firstAttribute="leading" secondItem="r6V-6R-d85" secondAttribute="leading" constant="49" id="oo8-HN-F9r"/>
