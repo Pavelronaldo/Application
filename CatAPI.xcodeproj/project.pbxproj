@@ -32,6 +32,7 @@
 		4A6B0E5D24682FDE00E9D770 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		4A6B0E5E24682FDE00E9D770 /* ImageListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListVC.swift; sourceTree = "<group>"; };
 		4A84923724646E47009E8C17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4A9A1B83247294770022BC4A /* CatAPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatAPI.entitlements; sourceTree = "<group>"; };
 		4AC9A2FD245D639D00A0353E /* CatAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC9A300245D639D00A0353E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		4AC9A302245D639D00A0353E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,13 +88,13 @@
 		4AC9A2FF245D639D00A0353E /* CatAPI */ = {
 			isa = PBXGroup;
 			children = (
+				4A9A1B83247294770022BC4A /* CatAPI.entitlements */,
 				4AD6DB4A24602AD70043E9F2 /* Supporting Files */,
 				4AD6DB4B24602AE30043E9F2 /* Part1 (Breeds List) */,
 				4AD6DB4D24603AC00043E9F2 /* Part 2 (Quiz Game) */,
 				4A6B0E5A24682E4500E9D770 /* Part 3 (Gallery) */,
 				4AC9A30B245D63A200A0353E /* LaunchScreen.storyboard */,
 				4AC9A30E245D63A200A0353E /* Info.plist */,
-				4A659A00247180BB009023EF /* MainMenuViewController.swift */,
 			);
 			path = CatAPI;
 			sourceTree = "<group>";
@@ -104,6 +105,7 @@
 				4A84923724646E47009E8C17 /* Main.storyboard */,
 				4AC9A300245D639D00A0353E /* AppDelegate.swift */,
 				4AC9A302245D639D00A0353E /* SceneDelegate.swift */,
+				4A659A00247180BB009023EF /* MainMenuViewController.swift */,
 				4AC9A309245D63A200A0353E /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -348,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatAPI/CatAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AFQBM27DHF;
 				INFOPLIST_FILE = CatAPI/Info.plist;
@@ -358,6 +361,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pavelDevelopment.CatAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatAPI/CatAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AFQBM27DHF;
 				INFOPLIST_FILE = CatAPI/Info.plist;
@@ -377,6 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pavelDevelopment.CatAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
