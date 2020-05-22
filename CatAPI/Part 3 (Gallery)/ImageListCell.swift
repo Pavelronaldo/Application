@@ -18,10 +18,6 @@ class ImageListCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func setimg(Url : String) {
         loadingView.startAnimating()
         let url = URL (string: Url)
